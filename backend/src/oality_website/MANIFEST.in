@@ -1,0 +1,6 @@
+graft src/oality_website
+graft docs
+include *.rst
+include *.md
+include *.cfg
+global-exclude *.pyc

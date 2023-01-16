@@ -1,0 +1,19 @@
+{
+  "portal": [
+    {
+      "email": "benoit@suttor.be",
+      "properties": {
+        "fullname": "Oality Website",
+        "location": "World"
+      },
+      "groups": [
+      ],
+      "roles": [
+        "Member"
+      ],
+      "username": "oality-website"
+    }
+  ],
+    "team": [
+  ]
+}
