@@ -1,0 +1,163 @@
+/*** Slider ***/
+
+/*
+@import (less) '~slick-carousel/slick/slick.css';
+@import (less) '~slick-carousel/slick/slick-theme.css';
+*/
+
+/*.ui.basic.segment.content-area {
+  padding: 0;
+  margin: 0;
+}*/
+
+.tile.view.mainslider {
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0em;
+    /*background: #00b627;*/
+    background: #252525eb;
+    justify-content: end;
+
+    h1 {
+      margin: 0 0 20px 0;
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    h3 {
+      margin: 0 0 20px 0;
+      font-size: 32px;
+      font-weight: 300;
+    }
+
+    a {
+      padding: 10px 20px;
+      background-color: #00bef1;
+      border-radius: 20px;
+      color: #fff;
+    }
+    div.segment {
+        position: absolute !important;
+        max-width: 50rem;
+        margin-bottom: 1rem;
+    }
+  }
+
+  .slick-arrow {
+    width: initial;
+    height: initial;
+  }
+
+  .slick-prev {
+    z-index: 10;
+    left: -18px;
+    background: transparent !important;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .slick-next {
+    right: -32px;
+    background: transparent !important;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+body.has-toolbar .tile.view.mainslider .slick-prev {
+  left: calc(-18px + 80px);
+}
+
+body.has-toolbar .tile.view.mainslider .slick-next {
+  right: calc(80px - 38px);
+}
+
+.slick-slider {
+  // This fixes homepage slider problem in ff (prevents from totally disappearing)
+  // width: 75vw;
+
+  img {
+    width: 75%;
+  }
+}
+
+// This is the width hack
+body:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed)
+  .ui.wrapper
+  > .full-width,
+body.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed)
+  .ui.wrapper
+  > .full-width,
+body.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed)
+  .ui.wrapper
+  > .full-width {
+  position: relative;
+  right: 50%;
+  left: 50%;
+  //width: 75vw !important;
+  max-width: initial !important;
+  margin-right: -50vw !important;
+  margin-left: -50vw !important;
+}
+
+/*** Site ***/
+
+.ui.secondary.pointing.menu .active.item {
+  background-color: transparent;
+  box-shadow: none;
+  border-color: #00b627;
+  font-weight: normal;
+  color: #252525;
+}
+.ui.secondary.pointing.menu .active.item:hover {
+  border-color: #417c25;
+}
+
+.ui.breadcrumb svg.icon {
+  fill: #417c25;
+}
+.ui.breadcrumb .divider {
+  color: #417c25;
+}
+
+.documentFirstHeading {
+  &::before {
+    border-bottom: 3px solid #00b627;
+  }
+}
+
+.ui.breadcrumb a {
+  color: #417c25;
+}
+a {
+  color: #00b627;
+  text-decoration: none;
+}
+a:hover {
+  color: #417c25;
+  text-decoration: none;
+}
+
+.ui.form .searchbox.field button {
+  color: #417c25;
+}
+
+.language-selector a {
+  padding: 0.35em;
+}
+.ui.vertical.segment {
+  border-bottom: 1px solid #00b627;
+}
+
+.ui.basic.segment .header .tools-search-wrapper {
+  margin-left: 0;
+}
