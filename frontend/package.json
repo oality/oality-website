@@ -28,7 +28,9 @@
     "@eeacms/volto-accordion-block",
     "@kitconcept/volto-blocks-grid",
     "@kitconcept/volto-slider-block",
-    "@eeacms/volto-matomo"
+    "@eeacms/volto-matomo",
+    "@codesyntax/volto-listingadvanced-variation",
+    "@plonegovbr/volto-code-block"
   ],
   "jest": {
     "modulePathIgnorePatterns": [
@@ -131,11 +133,13 @@
     "node": "^14 || ^16"
   },
   "dependencies": {
+    "@codesyntax/volto-listingadvanced-variation": "0.9.0",
     "@eeacms/volto-accordion-block": "*",
     "@eeacms/volto-matomo": "*",
     "@kitconcept/volto-blocks-grid": "*",
     "@kitconcept/volto-slider-block": "*",
-    "@plone/volto": "16.7.0"
+    "@plone/volto": "16.7.0",
+    "@plonegovbr/volto-code-block": "*"
   },
   "devDependencies": {
     "@plone/scripts": "^2.1.5",
