@@ -26,13 +26,11 @@ LABEL maintainer="Benoît Suttor <benoit@suttor.be>" \
       org.label-schema.description="Oality Website frontend image." \
       org.label-schema.vendor="Benoît Suttor"
 
-RUN <<<EOT
-    apt-get update
-    buildDeps="busybox"
-    apt-get install -y --no-install-recommends $buildDeps
-    busybox --install -s
-    rm -rf /var/lib/apt/lists/*
-EOT
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends busybox
+RUN busybox --install -s
+RUN rm -rf /var/lib/apt/lists/*
+
 
 
 USER node
