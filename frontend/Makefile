@@ -7,7 +7,7 @@ SHELL:=bash
 .DELETE_ON_ERROR:
 MAKEFLAGS+=--warn-undefined-variables
 MAKEFLAGS+=--no-builtin-rules
-IMAGE_NAME=Oality/oality-website-frontend
+IMAGE_NAME=oality/oality-website-frontend
 IMAGE_TAG=latest
 
 NODEBIN = ./node_modules/.bin
