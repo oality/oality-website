@@ -9,8 +9,6 @@ import { map } from 'lodash';
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 import { useSelector, shallowEqual } from 'react-redux';
 import { UniversalLink } from '@plone/volto/components';
-import config from '@plone/volto/registry';
-import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   copyright: {
@@ -26,8 +24,7 @@ const messages = defineMessages({
  * @returns {string} Markup of the component
  */
 const Footer = ({ intl }) => {
-  const { settings } = config;
-  const { lang, siteActions = [] } = useSelector(
+  const { siteActions = [] } = useSelector(
     (state) => ({
       lang: state.intl.locale,
       siteActions: state.actions?.actions?.site_actions,
@@ -79,10 +76,7 @@ const Footer = ({ intl }) => {
           {siteActions?.length
             ? map(siteActions, (item) => (
                 <div role="listitem" className="item" key={item.id}>
-                  <UniversalLink
-                    className="item"
-                    href={item?.url}
-                  >
+                  <UniversalLink className="item" href={item?.url}>
                     {item?.title}
                   </UniversalLink>
                 </div>

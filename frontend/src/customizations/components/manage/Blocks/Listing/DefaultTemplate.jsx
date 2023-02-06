@@ -19,7 +19,7 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
   } else if (href) {
     link = <UniversalLink href={href}>{linkTitle || href}</UniversalLink>;
   }
-  const language = useSelector((state) => "en" || state.intl.locale);
+  const language = useSelector((state) => 'en' || state.intl.locale);
 
   return (
     <>
@@ -32,15 +32,17 @@ const DefaultTemplate = ({ items, linkTitle, linkHref, isEditMode }) => {
                 <p>
                   {/* <FormattedDate date={item.effective} locale="fr" /> */}
                   <time
-                  className="time"
+                    className="time"
                     dateTime={item.effective}
                     title={new Intl.DateTimeFormat(language).format(
                       new Date(item.effective),
                     )}
                   >
-                  {new Intl.DateTimeFormat(language, { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Brussels' }).format(
-                      new Date(item.effective),
-                    )}
+                    {new Intl.DateTimeFormat(language, {
+                      dateStyle: 'medium',
+                      timeStyle: 'short',
+                      timeZone: 'Europe/Brussels',
+                    }).format(new Date(item.effective))}
                   </time>
                 </p>
                 <p>{item.description}</p>
