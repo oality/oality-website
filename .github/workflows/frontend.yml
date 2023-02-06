@@ -111,18 +111,19 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+          IMAGE_NAME: ${{ github.repository }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: ${{ env.REGISTRY }}/oality-website-frontend
-          labels: |
-            org.label-schema.docker.cmd=docker run -d -p 3000:3000 oality-website-frontend:latest
-          tags: |
-            type=ref,event=branch
-            type=sha
-            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          # labels: |
+          #   org.label-schema.docker.cmd=docker run -d -p 3000:3000 ${{ env.IMAGE_NAME }}
+          # tags: |
+          #   type=ref,event=branch
+          #   type=sha
+          #   type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
