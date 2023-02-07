@@ -10,6 +10,7 @@ on:
 env:
   node-version: 16.x
   REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
 
@@ -111,7 +112,6 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          IMAGE_NAME: ${{ github.repository }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
